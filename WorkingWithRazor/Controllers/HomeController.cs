@@ -11,16 +11,26 @@ namespace WorkingWithRazor.Controllers
     {
         public ViewResult Index()
         {
-            Product Kayak = new Product
+            //Product Kayak = new Product
+            //{
+            //    Name = "Kayak",
+            //    Desc = "A one man boat.",
+            //    price = 10,
+            //    ProductID = 1,
+            //    Category = "Boat"
+
+            //};
+
+            //ViewBag.StockLevel = 2;
+
+            Product[] product =
             {
-                Name = "Kayak",
-                Desc = "A one man boat.",
-                price = 10,
-                ProductID = 1,
-                Category = "Boat"
-        
+                new Product { Name="lol", price=0 },
+                new Product { Name="lol1", price=10 },
+                new Product { Name="lol2", price=20 },
+
             };
-            return View(Kayak);
+            return View(product);
         }
     }
 }
